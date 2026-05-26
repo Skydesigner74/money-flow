@@ -803,8 +803,8 @@ export default function HomeScreen() {
                 width: 0,
                 height: 0,
               },
-              shadowOpacity: 0.9,
-              shadowRadius: 25,
+              shadowOpacity: 0.35,
+              shadowRadius: 18,
               elevation: 30,
             }}
           >
@@ -857,16 +857,6 @@ export default function HomeScreen() {
             onPress={() =>
               setPaused(!paused)
             }
-            style={{
-              marginTop: 40,
-              backgroundColor:
-                paused
-                  ? "#00ff99"
-                  : "#111",
-              paddingVertical: 14,
-              paddingHorizontal: 30,
-              borderRadius: 18,
-            }}
           >
             <Text
               style={{
