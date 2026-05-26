@@ -796,38 +796,25 @@ export default function HomeScreen() {
             {currentTime}
           </Text>
 
-          <View
+          <Text
             style={{
-              shadowColor: "#00ff99",
-              shadowOffset: {
+              color: "#00ff99",
+              fontSize: 72,
+              fontWeight: "bold",
+
+              textShadowColor:
+                "rgba(0,255,153,0.45)",
+
+              textShadowOffset: {
                 width: 0,
                 height: 0,
               },
-              shadowOpacity: 0.35,
-              shadowRadius: 18,
-              elevation: 30,
+
+              textShadowRadius: 12,
             }}
           >
-            <Text
-              style={{
-                color: "#00ff99",
-                fontSize: 72,
-                fontWeight: "bold",
-
-                textShadowColor:
-                  "rgba(0,255,153,0.9)",
-
-                textShadowOffset: {
-                  width: 0,
-                  height: 0,
-                },
-
-                textShadowRadius: 25,
-              }}
-            >
-              {money.toFixed(3)} €
-            </Text>
-          </View>
+            {money.toFixed(3)} €
+          </Text>
 
           <Text
             style={{
@@ -857,6 +844,16 @@ export default function HomeScreen() {
             onPress={() =>
               setPaused(!paused)
             }
+            style={{
+              marginTop: 40,
+              backgroundColor:
+                paused
+                  ? "#00ff99"
+                  : "#111",
+              paddingVertical: 14,
+              paddingHorizontal: 30,
+              borderRadius: 18,
+            }}
           >
             <Text
               style={{
